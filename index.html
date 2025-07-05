@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LSDZ - DayZ Сервер</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="preloader">
+        <div class="loader-content">
+            <img src="images/lsdz_logo.png" alt="LSDZ Logo" class="loader-logo"> <p class="loading-text">ЗАГРУЗКА МИРА...</p> <div class="loading-bar-container">
+                <div class="loading-bar-progress" id="loading-bar-progress"></div>
+            </div>
+        </div>
+    </div>
+    <div id="content" class="hidden"> <header>
+            <div class="container">
+                <h1>LSDZ</h1>
+                <p class="tagline">Ваш новый дом</p>
+                <nav>
+                    <ul>
+                        <li><a href="#about">О нас</a></li>
+                        <li><a href="#features">Особенности</a></li>
+                        <li><a href="#connect">Как подключиться</a></li>
+                        <li><a href="#rules">Правила</a></li>
+                        <li><a href="#discord">Discord</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section id="hero" class="hero-section">
+                <div class="container">
+                    <h2>Ощути адреналин с LSDZ!</h2>
+                    <p>Присоединяйтесь к нам для незабываемых приключений, напряженных PvP и дружелюбного сообщества.</p>
+                    <button class="cta-button" onclick="location.href='#connect'">Присоединиться сейчас!</button>
+                </div>
+            </section>
+
+            <section id="about" class="info-section">
+                <div class="container">
+                    <h2>О сервере LSDZ</h2>
+                    <p>LSDZ — это уникальный DayZ сервер, созданный с любовью к выживанию и вниманием к деталям. Мы предлагаем сбалансированный игровой процесс, уникальные дома и активное, дружелюбное сообщество. Наша цель — предоставить игрокам лучший опыт выживания в суровом мире DayZ.</p>
+                </div>
+            </section>
+
+            <section id="features" class="info-section">
+                <div class="container">
+                    <h2>Наши особенности</h2>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <h3>Хорошие цены у трейдеров</h3>
+                            <p>Мы переработали экономику сервера.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h3>Кастомные локации</h3>
+                            <p>Исследуйте новые, уникальные места, созданные специально для нашего сервера.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h3>Активная экономика</h3>
+                            <p>Торгуйте с другими игроками и участвуйте в динамичной внутриигровой экономике.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h3>Надежная защита</h3>
+                            <p>Мы используем передовые методы защиты от читеров для честной игры.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="connect" class="info-section">
+                <div class="container">
+                    <h2>Как подключиться</h2>
+                    <p>Следуйте этим шагам, чтобы присоединиться к нашему серверу LSDZ:</p>
+                    <div class="connection-buttons-grid">
+                        <button class="connection-button" onclick="window.open('https://dayz.com/', '_blank')">
+                            <img src="images/dayz_icon.png" alt="DayZ Icon">
+                            <span>1. Установить DayZ</span>
+                            <small>Официальный сайт DayZ</small>
+                        </button>
+                        <button class="connection-button" onclick="window.open('https://dayzsalauncher.com/', '_blank')">
+                            <img src="images/dzsa_launcher_icon.png" alt="DZSA Launcher Icon">
+                            <span>2. Открыть DZSA Launcher</span>
+                            <small>Скачать DZSA Launcher</small>
+                        </button>
+                        <button class="connection-button" onclick="copyToClipboard('скоро')">
+                            <img src="images/ip_icon.png" alt="IP Icon">
+                            <span>3. Использовать наш IP</span>
+                            <small id="ip-address">Нажмите для копирования: скоро</small>
+                        </button>
+                        <button class="connection-button" onclick="window.open('https://steamcommunity.com/sharedfiles/filedetails/?id=ВАШ_КОЛЛЕКЦИЯ_МОДОВ_ID', '_blank')">
+                             <img src="images/mods_icon.png" alt="Mods Icon">
+                            <span>4. Установить Моды</span>
+                            <small>через лаунчер DayZ или DZSA Launcher.</small>
+                        </button>
+                        <button class="connection-button active-step">
+                            <img src="images/play_icon.png" alt="Play Icon">
+                            <span>5. Нажать "Присоединиться"</span>
+                            <small>Приятной игры на LSDZ!</small>
+                        </button>
+                    </div>
+                    <p style="margin-top: 30px; font-size: 0.9em; color: #a0a0a0;">* Убедитесь, что у вас есть игра DayZ и запущен лаунчер DayZ или DZSA Launcher.</p>
+                </div>
+            </section>
+
+            <section id="rules" class="info-section">
+                <div class="container">
+                    <h2>Правила Сервера</h2>
+                    <p>Ознакомьтесь с подробными правилами нашего сервера, чтобы обеспечить приятный игровой опыт для всех.</p>
+                    <div class="rules-buttons-grid">
+                        <button class="rules-button" onclick="window.open('https://docs.google.com/document/d/15ssVX8TK-IkgCt4q_nr6bwQhk0_cJRHcK-906cFvonA/edit?usp=sharing', '_blank')">Правила Discord</button>
+                        <button class="rules-button" onclick="window.open('https://docs.google.com/document/d/1x2PpQBP197G8bKIMR6LMbq5nvAU1YfimtrvGTWuPMu4/edit?usp=sharing', '_blank')">Общие Правила Сервера</button>
+                        <button class="rules-button" onclick="window.open('https://docs.google.com/document/d/1NDGlkqq9gKpJgWq3UdfcXvs2-2bR_fsGxTzLN4MLG6g/edit?usp=sharing', '_blank')">Уголовный Кодекс</button>
+                        <button class="rules-button" onclick="window.open('https://docs.google.com/document/d/1tj6vhxk_uB7sEzrFGhiS4mb_-hjfSqQ3dHZOZpAsLLI/edit?usp=sharing', '_blank')">Правила Администраторов</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="discord" class="info-section">
+                <div class="container">
+                    <h2>Наш Discord</h2>
+                    <p>Присоединяйтесь к нашему сообществу в Discord, чтобы быть в курсе последних новостей, общаться с игроками и получать поддержку.</p>
+                    <button class="cta-button" onclick="window.open('https://discord.gg/huJh7wND', '_blank')">Присоединиться к Discord</button>
+                </div>
+            </section>
+
+            <section id="social-media" class="info-section">
+                <div class="container">
+                    <h2>Наши Соцсети</h2>
+                    <p>Следите за нами и создателем сервера, чтобы быть в курсе всех новостей и стримов!</p>
+                    <div class="social-buttons-grid">
+                        <button class="social-button youtube-button" onclick="window.open('https://www.youtube.com/@LOS-SANTOS-LSDZ/featured', '_blank')">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/256px-YouTube_full-color_icon_%282017%29.svg.png" alt="YouTube Icon">
+                            Канал на YouTube
+                        </button>
+                        <button class="social-button twitch-button" onclick="window.open('https://www.twitch.tv/chucha122', '_blank')">
+                            <img src="https://avatars.mds.yandex.net/i?id=43355b410fcc24b3e7b6eb6f233221afc49d44af-4420695-images-thumbs&n=13" alt="Twitch Icon">
+                            Канал на Twitch
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container">
+                <p>© 2025 LSDZ DayZ Сервер. Все права защищены.</p>
+            </div>
+        </footer>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
